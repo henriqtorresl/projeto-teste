@@ -1,0 +1,26 @@
+<h1 class="tituloPagina">{{ tituloPagina }}</h1>
+
+<form class="example-form" [formGroup]="formCadastroProduto">           <!--Para usar o formGroup tenho que importar o ReactiveFormsModule-->
+    <!--Para conversar com o formGroup tenho que adicionar o formControlName nos meus inputs-->
+    <mat-form-field class="example-full-width">
+        <mat-label>Título</mat-label>
+        <input matInput placeholder="Título do produto" formControlName="nome">
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width">
+        <mat-label>Preço</mat-label>
+        <input matInput type="number" placeholder="Digite um preço" formControlName="preco">
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width">
+        <mat-label>Estoque</mat-label>
+        <input matInput type="number" placeholder="Digite o estoque" formControlName="estoque">
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width">
+        <mat-label>Descrição</mat-label>
+        <textarea matInput placeholder="Descreva o produto" formControlName="descricao"></textarea>
+    </mat-form-field>
+
+    <button mat-raised-button color="primary" (click)="salvarProduto()">Salvar</button>
+</form>
